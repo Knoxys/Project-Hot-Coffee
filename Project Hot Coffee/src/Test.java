@@ -1,6 +1,6 @@
 
 public class Test {
 /*
- * Wieder eine Test!
+ * Wieder ein Test!
  */
 }
