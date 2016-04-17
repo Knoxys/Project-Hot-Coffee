@@ -14,7 +14,7 @@
 
 		static Scanner scan = new Scanner(System.in);
 		static String name;
-			// Die Stichwörter von dem der Anwender wählen kann!
+			
 		static String[] stichwort = {"1) Blackscreen","2) Exception","3) Nullpointer","4) Anders Problem bzw. Neues Ticket eröffnen"};
 		static int nummer;
 			
@@ -35,10 +35,10 @@
 			}
 
 		public static void main(String [] args) {
-			//getName() ist das Wichtigste. Alles weitere kann vernachlässigt werden!
+			
 			try{
 			getName();
-				//if (nummer<1 || nummer>4) throw new IntegerOutOfRangeException();
+				
 			}
 			catch (Exception e){
 				System.out.println("Das kannst du nicht tun");
