@@ -16,6 +16,7 @@
 		
 		
 		
+		
 		static Scanner scan = new Scanner(System.in);
 		static String name;
 			// Die Stichwörter von dem der Anwender wählen kann!
@@ -36,7 +37,7 @@
 		public static void getStichwort(){
 			System.out.println("Bitte wähl ein Stichwort");
 			for (int i=0;i<stichwort.length;i++){
-				System.out.println(stichwort[i]);
+			System.out.println(stichwort[i]);
 			}
 			int nummer=scan.nextInt();
 			
@@ -44,11 +45,13 @@
 			}
 		
 		
-		
 		public static void main(String [] args) {
+			//getName() ist das Wichtigste. Alles weitere kann vernachlässigt werden!
+			try{
 			getName();
 			}
-		
-		
-		
+			catch (Exception e){
+			System.out.println("Das kannst du nicht machen");
+			}
+			}
 			}
