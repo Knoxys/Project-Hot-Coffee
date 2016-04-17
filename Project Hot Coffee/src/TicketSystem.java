@@ -40,18 +40,29 @@
 			System.out.println(stichwort[i]);
 			}
 			int nummer=scan.nextInt();
-			
 			System.out.println("Du hast gewähl "+stichwort[nummer-1].substring(3,stichwort[nummer-1].length()));
 			}
 		
-		
 		public static void main(String [] args) {
 			//getName() ist das Wichtigste. Alles weitere kann vernachlässigt werden!
+			//boolean done = false;
+			//do{
 			try{
 			getName();
+				//if (nummer<1 || nummer>4) throw new IntegerOutOfRangeException();
 			}
+				//catch (IntegerOutOfRangeException ex){
+				//System.out.println("Wähle zwischen den 4 Möglichkeiten");
+				//}
+			//}while (!done);
+			// done=true;
+			//finally {
+			//getName();	
+			//}
+			
 			catch (Exception e){
-			System.out.println("Das kannst du nicht machen");
+				System.out.println("Das kannst du nicht tun");
+				System.out.println(e);
 			}
 			}
 			}
