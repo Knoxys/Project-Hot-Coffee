@@ -1,5 +1,6 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 	
 	public class TicketSystem{
@@ -11,7 +12,7 @@ import java.util.Scanner;
 		static Scanner scan = new Scanner(System.in);
 		static String name;
 		static int nummer;
-		static String[] stichwort = {"1) Blackscreen","2) Exception","3) Nullpointer","4) Anders Problem bzw. Neues Ticket eröffnen"};
+		static String[] stichwort = {"1) Blackscreen","2) Exception","3) Nullpointer","4) Neues Ticket eröffnen"};
 		
 		public static void getName(){
 			System.out.println("Bitte gib dein Name ein");
@@ -26,22 +27,27 @@ import java.util.Scanner;
 			boolean done = false;
 			while(!done){
 			     	try{
-			    	 for (int i=0;i<stichwort.length;i++){
-			 		System.out.println(stichwort[i]);
-			    	 }
-			 		int nummer=scan.nextInt();
+			    	for (int i=0;i<stichwort.length;i++){
+			    	System.out.println(stichwort[i]);
+			    	}
+			    	
+			 		int nummer=scan.nextInt(); 
 			 		System.out.println("Du hast gewähl "+stichwort[nummer-1].substring(3,stichwort[nummer-1].length()));
 			 		done=true;
-			     	}
+			 		}
+			     	
 			     	catch(InputMismatchException e){
 			    	System.out.println("Ich Brauch eine Zahl");
-			    	break;
+			    	//break;
 			     	}
+			     	
+			     	}
+			
 			}	
-		}
+		
+		
 
 		public static void main(String [] args) {
-			
 			try{
 			getName();	
 			}
@@ -50,5 +56,7 @@ import java.util.Scanner;
 			System.out.println("Das kannst du nicht tun");
 			System.out.println(e);
 			}
+			
 		}
+		
 	}
