@@ -39,7 +39,7 @@ public class TicketSystem {
 			catch (InputMismatchException e) {
 				System.out.println("Ich Brauche eine Zahl");
 				scan.next();
-				// break;
+				
 			}
 
 		}
