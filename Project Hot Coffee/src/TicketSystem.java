@@ -15,9 +15,23 @@ public class TicketSystem {
 
 	public static void getName() {
 		System.out.println("Bitte gib dein Name ein");
-		name = scan.nextLine();
-		System.out.println("Hallo " + name);
-		getStichwort();
+		boolean done = false;
+		while (!done){
+			try {
+				name = scan.nextLine();
+				//Ausbau fähig; http://www.tutorialspoint.com/java/util/scanner_hasnext_string.htm
+				scan.next(name);
+				done = true;
+				System.out.println("Hallo " + name);
+				getStichwort();
+			}
+			
+			catch (InputMismatchException e){
+				System.out.println("Ich Brauch Buchstaben");
+			}
+			
+		}
+		
 	}
 
 	public static void getStichwort() {
@@ -48,7 +62,7 @@ public class TicketSystem {
 
 	public static void main(String[] args) {
 		try {
-			getStichwort();
+			getName();
 		}
 
 		catch (Exception e) {
