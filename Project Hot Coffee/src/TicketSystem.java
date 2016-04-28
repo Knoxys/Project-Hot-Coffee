@@ -1,3 +1,5 @@
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Set;
@@ -65,10 +67,17 @@ public class TicketSystem {
 	
 	public static void getTicket(){
 		Ticket Fehler1 = new Ticket();
-		name = scan.nextLine();
-		int Zeit = (int) System.currentTimeMillis();
-		Fehler1.setNewStichwort(name, Zeit);
-		return;
+		String ticketname = scan.nextLine();
+		int zeit = (int) System.currentTimeMillis();
+		
+		long yourmilliseconds = System.currentTimeMillis();
+		SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy HH:mm");    
+		Date resultdate = new Date(yourmilliseconds);
+		System.out.println(sdf.format(resultdate));
+		
+		Fehler1.setNewStichwort(ticketname, zeit);
+		System.out.println(zeit);
+		System.out.println(ticketname);
 	}
 
 	public static void main(String[] args) {
