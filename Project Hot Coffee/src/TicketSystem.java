@@ -1,5 +1,6 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.Set;
 
 public class TicketSystem {
 
@@ -48,6 +49,8 @@ public class TicketSystem {
 				done = true;
 				System.out.println(
 						"Du hast gewähl " + stichwort[nummer - 1].substring(3, stichwort[nummer - 1].length()));
+				// Hier sollte es weiter gehen!
+				getTicket();
 			}
 
 			catch (InputMismatchException e) {
@@ -58,6 +61,14 @@ public class TicketSystem {
 
 		}
 
+	}
+	
+	public static void getTicket(){
+		Ticket Fehler1 = new Ticket();
+		name = scan.nextLine();
+		int Zeit = (int) System.currentTimeMillis();
+		Fehler1.setNewStichwort(name, Zeit);
+		return;
 	}
 
 	public static void main(String[] args) {
