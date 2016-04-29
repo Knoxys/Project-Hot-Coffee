@@ -15,15 +15,28 @@ public class TicketSystem {
 	static String name;
 	static int nummer;
 	static String[] stichwort = { "1) Blackscreen", "2) Exception", "3) Nullpointer", "4) Neues Ticket eröffnen" };
+	
+	
 
 	public static void getName() {
 		System.out.println("Bitte gib dein Name ein");
+		// BEISPIEL für nur Buchstaben
+		Scanner sc = new Scanner(System.in);
+	    System.out.println("Please enter letters:");
+	    while (!sc.hasNext("[A-Za-z]+")) {
+	        System.out.println("Nope, that's not it!");
+	        sc.next();
+	    }
+	    String word = sc.next();
+	    System.out.println("Thank you! Got " + word);
+	    // BEISPIL ENDE
+	    
 		boolean done = false;
 		while (!done){
 			try {
 				name = scan.nextLine();
 				//Ausbau fähig; http://www.tutorialspoint.com/java/util/scanner_hasnext_string.htm
-				scan.next(name);
+				
 				done = true;
 				System.out.println("Hallo " + name);
 				getStichwort();
@@ -68,16 +81,16 @@ public class TicketSystem {
 	public static void getTicket(){
 		Ticket Fehler1 = new Ticket();
 		String ticketname = scan.nextLine();
-		int zeit = (int) System.currentTimeMillis();
 		
 		long yourmilliseconds = System.currentTimeMillis();
 		SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy HH:mm");    
 		Date resultdate = new Date(yourmilliseconds);
 		System.out.println(sdf.format(resultdate));
 		
-		Fehler1.setNewStichwort(ticketname, zeit);
-		System.out.println(zeit);
-		System.out.println(ticketname);
+		/*Fehler1.setNewStichwort(ticketname, zeit);
+		*System.out.println(zeit);
+		*System.out.println(ticketname);
+		*/
 	}
 
 	public static void main(String[] args) {

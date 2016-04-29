@@ -2,11 +2,11 @@
 public class Ticket {
 
 	private String NewStichwort;
-	private int ZeitStichwort;
+	private double ZeitStichwort;
 	
-	public void setNewStichwort(String name, int Zeit){
+	public void setNewStichwort(String name, double resultdate){
 		NewStichwort=name;
-		ZeitStichwort=Zeit;
+		ZeitStichwort=resultdate;
 	}
 	
 }
