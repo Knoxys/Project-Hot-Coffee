@@ -3,9 +3,9 @@ public class TicketSystem {
 	public static void main(String[] args) {
 		try {
 			Benutzer b = new Benutzer();
-			Wahl f = new Wahl();
+			Wahl w = new Wahl();
 			b.getName();
-			f.getStichwort();
+			w.getStichwort();
 		}
 
 		catch (Exception e) {
