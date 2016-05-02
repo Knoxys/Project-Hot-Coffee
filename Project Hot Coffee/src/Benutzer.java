@@ -3,12 +3,15 @@ import java.util.Scanner;
 
 public class Benutzer {
 	private Scanner sc = new Scanner(System.in);
-	private String word;
+	private String name;
 
 	public Benutzer() {
 
 	}
 
+	public void getBenutzer(String benutzername, String password){
+		
+	}
 	public void getName() {
 		System.out.println("Bitte gib dein Name ein");
 		// BEISPIEL für nur Buchstaben
@@ -18,8 +21,8 @@ public class Benutzer {
 			sc.next();
 		}
 
-		word = sc.next();
-		System.out.println("Danke schön! " + word);
+		name = sc.next();
+		System.out.println("Danke schön! " + name);
 		// BEISPIL ENDE
 
 	}

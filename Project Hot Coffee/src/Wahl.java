@@ -19,15 +19,14 @@ public class Wahl {
 				}
 
 				int nummer = scan.nextInt();
-				
-				while (nummer ==1 || nummer ==2 || nummer==3 || nummer==4){
-				done = true;
-				System.out.println(
-						"Du hast gewähl " + stichwort[nummer - 1].substring(3, stichwort[nummer - 1].length()));
-				break;
+
+				while (nummer == 1 || nummer == 2 || nummer == 3 || nummer == 4) {
+					done = true;
+					System.out.println(
+							"Du hast gewähl " + stichwort[nummer - 1].substring(3, stichwort[nummer - 1].length()));
+					break;
 				}
-				
-				
+
 				// für getTicket
 				long yourmilliseconds = System.currentTimeMillis();
 				SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy HH:mm");
