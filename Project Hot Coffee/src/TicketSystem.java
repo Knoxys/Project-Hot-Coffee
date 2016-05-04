@@ -10,9 +10,9 @@ public class TicketSystem {
 			Zeit 	 z = new Zeit();
 			//Dokument d = new Dokument();
 			
-			b.getName();
-			w.getStichwort();
-			z.getZeitStempel();
+			b.setName();
+			w.setStichwort();
+			z.setZeitStempel();
 			//d.setDokument();
 			db.setDB();
 			

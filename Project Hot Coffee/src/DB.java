@@ -8,7 +8,7 @@ import com.mysql.jdbc.Connection;
 public class DB {
 
 	public void setDB() {
-
+		
 		String url = "jdbc:mysql://localhost:3306/";
 		String user = "root";
 		String password = "";
@@ -29,14 +29,23 @@ public class DB {
 			 * Create an example table
 			 */
 			stt.execute("DROP TABLE IF EXISTS TICKET");
-			stt.execute("CREATE TABLE TICKET (" + "id BIGINT NOT NULL AUTO_INCREMENT," + "NAME VARCHAR(25),"
-					+ "STICHWORT VARCHAR(25)," + "ZEIT VARCHAR(25)," + "PRIMARY KEY(id)" + ")");
+			stt.execute("CREATE TABLE TICKET " 
+					+"(" 
+					+ "id BIGINT NOT NULL AUTO_INCREMENT," 
+					+ "NAME VARCHAR(25),"
+					+ "STICHWORT VARCHAR(25)," 
+					+ "ZEIT VARCHAR(25)," 
+					+ "PRIMARY KEY(id)" 
+					+ ")");
 
 			/**
-			 * Add entries to the example table
+			 * Add entries to the example table !!!! An dieser Stelle muss ich
+			 * ansetzen !!!!!!
 			 */
 			stt.execute("INSERT INTO TICKET (NAME, STICHWORT, ZEIT) VALUES"
-					+ "('Joe', 'Blackscreen', '22.06.2016'), ('Mary', 'Nullpointer', '22.05.2014'), ('Jill', 'Neues Ticket', '07.08.2013')");
+					+ "('Joe', 'Blackscreen', '22.06.2016'), "
+					+ "('Mary', 'Nullpointer', '22.05.2014'), "
+					+ "('Jill', 'Neues Ticket', '07.08.2013')");
 
 			/**
 			 * Query TICKET entries with the Name 'Bloggs'

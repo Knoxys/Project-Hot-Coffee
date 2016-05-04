@@ -5,15 +5,7 @@ public class Benutzer {
 	private Scanner sc = new Scanner(System.in);
 	private String name;
 
-	public Benutzer() {
-
-	}
-
-	public void getBenutzer(String benutzername, String password) {
-
-	}
-
-	public void getName() {
+	public void setName() {
 		System.out.println("Bitte gib dein Name ein");
 		// BEISPIEL für nur Buchstaben
 
@@ -24,8 +16,9 @@ public class Benutzer {
 
 		name = sc.next();
 		System.out.println("Danke schön! " + name);
-		// BEISPIL ENDE
-
+		
+		//BEISPIEL (Könnte gelöscht werden
+		
 	}
 
 }

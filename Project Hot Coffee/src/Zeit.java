@@ -3,7 +3,7 @@ import java.text.SimpleDateFormat;
 
 public class Zeit {
 
-	public void getZeitStempel() {
+	public void setZeitStempel() {
 		long yourmilliseconds = System.currentTimeMillis();
 		SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy HH:mm");
 		Date resultdate = new Date(yourmilliseconds);

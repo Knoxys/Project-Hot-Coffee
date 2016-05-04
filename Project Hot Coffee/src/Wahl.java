@@ -6,7 +6,7 @@ public class Wahl {
 	private Scanner scan = new Scanner(System.in);
 	private String[] stichwort = { "1) Blackscreen", "2) Exception", "3) Nullpointer", "4) Neues Ticket eröffnen" };
 
-	public void getStichwort() {
+	public void setStichwort() {
 		System.out.println("Bitte wähl ein Stichwort");
 		// http://stackoverflow.com/questions/35471870/infinite-loop-while-catching-an-exception
 		boolean done = false;
