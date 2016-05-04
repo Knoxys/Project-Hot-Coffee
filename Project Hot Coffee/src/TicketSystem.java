@@ -8,12 +8,12 @@ public class TicketSystem {
 			Wahl 	 w = new Wahl();
 			DB 		 db = new DB();
 			Zeit 	 z = new Zeit();
-			Dokument d = new Dokument();
+			//Dokument d = new Dokument();
 			
 			b.getName();
 			w.getStichwort();
 			z.getZeitStempel();
-			d.setDokument();
+			//d.setDokument();
 			db.setDB();
 			
 		}

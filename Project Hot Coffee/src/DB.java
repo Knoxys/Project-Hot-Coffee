@@ -22,32 +22,32 @@ public class DB {
 			/**
 			 * Create and select a database for use.
 			 */
-			stt.execute("CREATE DATABASE IF NOT EXISTS test");
-			stt.execute("USE test");
+			stt.execute("CREATE DATABASE IF NOT EXISTS TICKETSYSTEM");
+			stt.execute("USE TICKETSYSTEM");
 
 			/**
 			 * Create an example table
 			 */
-			stt.execute("DROP TABLE IF EXISTS people");
-			stt.execute("CREATE TABLE people (" + "id BIGINT NOT NULL AUTO_INCREMENT," + "fname VARCHAR(25),"
-					+ "lname VARCHAR(25)," + "PRIMARY KEY(id)" + ")");
+			stt.execute("DROP TABLE IF EXISTS TICKET");
+			stt.execute("CREATE TABLE TICKET (" + "id BIGINT NOT NULL AUTO_INCREMENT," + "NAME VARCHAR(25),"
+					+ "STICHWORT VARCHAR(25)," + "ZEIT VARCHAR(25)," + "PRIMARY KEY(id)" + ")");
 
 			/**
 			 * Add entries to the example table
 			 */
-			stt.execute("INSERT INTO people (fname, lname) VALUES"
-					+ "('Joe', 'Bloggs'), ('Mary', 'Bloggs'), ('Jill', 'Hill')");
+			stt.execute("INSERT INTO TICKET (NAME, STICHWORT, ZEIT) VALUES"
+					+ "('Joe', 'Blackscreen', '22.06.2016'), ('Mary', 'Nullpointer', '22.05.2014'), ('Jill', 'Neues Ticket', '07.08.2013')");
 
 			/**
-			 * Query people entries with the lname 'Bloggs'
+			 * Query TICKET entries with the Name 'Bloggs'
 			 */
-			ResultSet res = stt.executeQuery("SELECT * FROM people WHERE lname = 'Bloggs'");
+			ResultSet res = stt.executeQuery("SELECT * FROM TICKET WHERE STICHWORT = 'Nullpointer'");
 
 			/**
 			 * Iterate over the result set from the above query
 			 */
 			while (res.next()) {
-				System.out.println(res.getString("fname") + " " + res.getString("lname"));
+				System.out.println(res.getString("NAME") + " " + res.getString("STICHWORT"));
 			}
 			System.out.println("");
 
@@ -56,12 +56,12 @@ public class DB {
 			 * statements should be used when building query strings from user
 			 * input as they protect against SQL injections
 			 */
-			PreparedStatement prep = con.prepareStatement("SELECT * FROM people WHERE lname = ?");
-			prep.setString(1, "Bloggs");
+			PreparedStatement prep = con.prepareStatement("SELECT * FROM TICKET WHERE NAME = ?");
+			prep.setString(1, "Joe");
 
 			res = prep.executeQuery();
 			while (res.next()) {
-				System.out.println(res.getString("fname") + " " + res.getString("lname"));
+				System.out.println(res.getString("NAME") + " " + res.getString("NAME"));
 			}
 
 			/**
