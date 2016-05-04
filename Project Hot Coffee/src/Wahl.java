@@ -1,5 +1,3 @@
-import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -27,11 +25,7 @@ public class Wahl {
 					break;
 				}
 
-				// für getTicket
-				long yourmilliseconds = System.currentTimeMillis();
-				SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy HH:mm");
-				Date resultdate = new Date(yourmilliseconds);
-				System.out.println(sdf.format(resultdate));
+				
 
 			}
 
