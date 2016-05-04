@@ -9,9 +9,10 @@ public class Benutzer {
 
 	}
 
-	public void getBenutzer(String benutzername, String password){
-		
+	public void getBenutzer(String benutzername, String password) {
+
 	}
+
 	public void getName() {
 		System.out.println("Bitte gib dein Name ein");
 		// BEISPIEL für nur Buchstaben

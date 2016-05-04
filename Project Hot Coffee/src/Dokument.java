@@ -13,9 +13,9 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 public class Dokument {
-	
+
 	public void setDokument() {
-		
+
 		try {
 			// 1. METHODE
 			File file = new File("Hello1.txt");
@@ -35,7 +35,6 @@ public class Dokument {
 			for (char c : a)
 				System.out.print(c); // prints the characters one by one
 			fr.close();
-			
 
 			// 2.Methode
 			mybean mb = new mybean("erster wert", "zweiter wert");

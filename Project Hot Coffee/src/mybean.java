@@ -5,7 +5,7 @@ public class mybean implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private String one;
 	private String two;
-	
+
 	public mybean() {
 	}
 
@@ -29,7 +29,6 @@ public class mybean implements Serializable {
 	public void setTwo(String two) {
 		this.two = two;
 	}
-	
-	
-//für das 2. Beispiel aus Dokument!!
+
+	// fï¿½r das 2. Beispiel aus Dokument!!
 }

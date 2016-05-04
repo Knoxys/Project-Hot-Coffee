@@ -25,8 +25,6 @@ public class Wahl {
 					break;
 				}
 
-				
-
 			}
 
 			catch (InputMismatchException e) {
