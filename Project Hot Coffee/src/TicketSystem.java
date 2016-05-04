@@ -30,6 +30,7 @@ public class TicketSystem {
 			System.out.println(e);
 		}
 		
+		
 		// Datenbank BEISPIEL https://nodehead.com/java-how-to-connect-to-xampps-mysql-in-eclipse/
 		/**
          * 3306 is the default port for MySQL in XAMPP. Note both the 
