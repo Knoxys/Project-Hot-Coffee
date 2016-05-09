@@ -4,18 +4,18 @@ public class TicketSystem {
 
 		try {
 
-			Benutzer 		b 			= new Benutzer();
-			Wahl 	 		w 			= new Wahl();
-			Zeit 	 		z 			= new Zeit();
-			DBschreiben 	dbschreiben = new DBschreiben();
-			DBlesen 		dblesen 	= new DBlesen();
+			Benutzer 		b 	= new Benutzer();
+			Wahl 	 		w 	= new Wahl();
+			Zeit 	 		z 	= new Zeit();
+			DBschreiben 	dbs = new DBschreiben();
+			DBlesen 		dbl = new DBlesen();
 			
 
 			b.setName();
 			w.setStichwort();
 			z.setZeitStempel();
-			dbschreiben.setDB();
-			dblesen.getDB();
+			dbs.setDB();
+			dbl.getDB();
 			
 
 		}

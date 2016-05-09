@@ -12,11 +12,6 @@ public class DBlesen {
 		String user = "root";
 		String password = "";
 
-		// BEISPIEL
-		// Benutzer b = new Benutzer();
-		// b.getName(name);
-		// Beispiel ENDE
-
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 			Connection con = (Connection) DriverManager.getConnection(url, user, password);
@@ -30,7 +25,6 @@ public class DBlesen {
 			while (res.next()) {
 				System.out.println(res.getString("NAME") + " " + res.getString("STICHWORT"));
 			}
-			System.out.println("");
 
 			/**
 			 * Same as the last query, but using a prepared statement. Prepared
@@ -45,20 +39,18 @@ public class DBlesen {
 				System.out.println(res.getString("NAME") + " " + res.getString("STICHWORT"));
 			}
 
-			// BEISPIEL
+			
 			ResultSet set = stt.executeQuery("SELECT * FROM TICKET WHERE STICHWORT = 'Blackscreen'");
 
 			while (set.next()) {
 				System.out.println(set.getString("NAME") + " " + set.getString("ZEIT"));
 			}
-			System.out.println("");
-			// prep.executeQuery();
-			// System.out.println(res.getString("Zeit"));
-			// BEISPIEL ENDE
+			
 			res.close();
 			stt.close();
 			prep.close();
 			con.close();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
