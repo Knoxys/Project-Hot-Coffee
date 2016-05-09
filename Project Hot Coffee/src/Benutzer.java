@@ -1,13 +1,16 @@
-
 import java.util.Scanner;
 
 public class Benutzer {
 	private Scanner sc = new Scanner(System.in);
 	private String name;
+	
+	public String getName(String name) {
+		return name;
+	}
+	
 
 	public void setName() {
 		System.out.println("Bitte gib dein Name ein");
-		// BEISPIEL für nur Buchstaben
 
 		while (!sc.hasNext("[A-Za-z]+")) {
 			System.out.println("Bitte Buchstaben eingeben");
@@ -16,9 +19,7 @@ public class Benutzer {
 
 		name = sc.next();
 		System.out.println("Danke schön! " + name);
-		
-		//BEISPIEL (Könnte gelöscht werden
-		
+
 	}
 
 }
