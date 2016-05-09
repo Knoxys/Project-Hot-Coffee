@@ -10,7 +10,7 @@ import com.mysql.jdbc.Connection;
  *
  */
 
-public class DB {
+public class DBschreiben {
 
 	public void setDB() {
 		

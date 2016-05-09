@@ -6,7 +6,7 @@ public class TicketSystem {
 
 			Benutzer b = new Benutzer();
 			Wahl 	 w = new Wahl();
-			DB 		db = new DB();
+			DBschreiben 		db = new DBschreiben();
 			Zeit 	 z = new Zeit();
 			// Dokument d = new Dokument();
 

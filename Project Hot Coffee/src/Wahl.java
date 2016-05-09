@@ -28,7 +28,7 @@ public class Wahl {
 			}
 
 			catch (InputMismatchException e) {
-				System.out.println("Ich Brauche eine Zahl");
+				System.out.println("Ich Brauche eine Zahl zwischen 1-4");
 				scan.next();
 
 			}
